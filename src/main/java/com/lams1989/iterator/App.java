@@ -6,7 +6,8 @@ import java.util.Scanner;
 
 public class App{
 	
-   static Iterator func(ArrayList mylist){
+   @SuppressWarnings("rawtypes")
+static Iterator func(ArrayList mylist){
       Iterator it=mylist.iterator();
       while(it.hasNext()){
          Object element = it.next();
@@ -18,7 +19,8 @@ public class App{
    }
    @SuppressWarnings({ "unchecked" })
    public static void main(String []args){
-      ArrayList mylist = new ArrayList();
+      @SuppressWarnings("rawtypes")
+	ArrayList mylist = new ArrayList();
       Scanner sc = new Scanner(System.in);
       int n = sc.nextInt();
       int m = sc.nextInt();
@@ -31,7 +33,8 @@ public class App{
          mylist.add(sc.next());
       }
       
-      Iterator it=func(mylist);
+      @SuppressWarnings("rawtypes")
+	Iterator it=func(mylist);
       while(it.hasNext()){
          Object element = it.next();
          System.out.println((String)element);
